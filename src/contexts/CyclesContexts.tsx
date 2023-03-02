@@ -12,20 +12,11 @@ import {
   interruptCurrentCycleAction,
   markCurrentCycleAsFinishedAction,
 } from '../Reduces/cycles/actions'
-import { cyclesReducer } from '../Reduces/cycles/reducer'
+import { Cycle, cyclesReducer } from '../Reduces/cycles/reducer'
 
 interface CreateCycleData {
   task: string
   minutesAmount: number
-}
-
-interface Cycle {
-  id: string
-  task: string
-  minutesAmount: number
-  startDate: Date
-  interruptedDate?: Date
-  finishedDate?: Date
 }
 
 interface CyclesContextType {
@@ -54,14 +45,16 @@ export function CyclesContextProvider({
       cycles: [],
       activeCycledId: null,
     },
-    () => {
-      const storageStageAsJSON = localStorage.getItem(
+    (initialState) => {
+      const storedStateAsJSON = localStorage.getItem(
         '@ignite-timer:cycles-state-1.0.0'
       )
 
-      if (storageStageAsJSON) {
-        return JSON.parse(storageStageAsJSON)
+      if (storedStateAsJSON) {
+        return JSON.parse(storedStateAsJSON)
       }
+
+      return initialState
     }
   )
 
