@@ -28,6 +28,10 @@ O layout da aplicação está disponível no Figma:
 	 <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNzAwMjBmOWVmMzUwNzZhZDdhZGFhNDJhOTkxZWY0M2RmMTI4NTJlYyZjdD1n/eGEhyk0sUxBLLpuCdz/giphy.gif" />
 </h4>
 
+<h3 align="center">
+    <a href="https://ignite-timer-729f.vercel.app/">Acessar a demonstração</a>
+<h3 >
+
 ## 🛠 Tecnologias
 
 As seguintes ferramentas foram usadas na construção do projeto:
